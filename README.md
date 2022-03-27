@@ -4,6 +4,8 @@ A Python ULID (Universally Unique Lexicographically Sortable Identifier) package
 
 Uses [rusty_ulid](https://github.com/huxi/rusty_ulid) to generate ULIDs.
 
+This is my first attempt at writing a Python package with Rust.
+
 ## Installation
 
 Coming soon!
