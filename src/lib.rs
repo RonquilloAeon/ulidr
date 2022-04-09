@@ -1,9 +1,9 @@
 use pyo3::prelude::*;
-use rusty_ulid::generate_ulid_bytes;
+use rusty_ulid::generate_ulid_string;
 
 #[pyfunction]
-fn generate_ulid() -> [u8; 16] {
-    generate_ulid_bytes()
+fn generate_ulid() -> String {
+    generate_ulid_string()
 }
 
 #[pymodule]

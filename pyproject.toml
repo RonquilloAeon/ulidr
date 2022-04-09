@@ -1,23 +1,5 @@
-[tool.poetry]
-name = "ulidr"
-version = "0.1.0"
-description = ""
-authors = ["Martin R <23411718+RonquilloAeon@users.noreply.github.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.10"
-
-[tool.poetry.dev-dependencies]
-pytest = "^7"
-black = "^22.1.0"
-
 [tool.pytest.ini_options]
 addopts = ["-s"]
 
 [build-system]
-requires = ["maturin>=0.12<0.13"]
-build-backend = "maturin"
-
-[tool.maturin]
-sdist-include = ["Cargo.lock"]
-strip = true
+requires = ['setuptools', 'wheel', 'setuptools-rust']

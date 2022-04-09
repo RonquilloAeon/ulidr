@@ -6,4 +6,10 @@ def test_version():
 
 
 def test_generate_ulid():
-    assert len(generate_ulid().decode("utf-8")) == 26
+    ulid1 = generate_ulid()
+    ulid2 = generate_ulid()
+
+    assert ulid1 != ulid2
+
+    assert len(ulid1) == 26
+    assert len(ulid2) == 26
