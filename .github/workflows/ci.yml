@@ -144,11 +144,11 @@ jobs:
             curl https://sh.rustup.rs -sSf | sh -s -- --profile=minimal -y &&
             rustup show
 
-        - run: ${{ matrix.ls || 'ls -lh' }} dist/
+      - run: ${{ matrix.ls || 'ls -lh' }} dist/
 
-        - run: twine check dist/*
+      - run: twine check dist/*
 
-        - uses: actions/upload-artifact@v2
-          with:
-            name: pypi_files
-            path: dist
+      - uses: actions/upload-artifact@v2
+        with:
+          name: pypi_files
+          path: dist
