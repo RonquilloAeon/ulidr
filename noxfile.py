@@ -15,7 +15,7 @@ def format(session):
     session.run("black", "ulidr", "tests", *session.posargs)
 
 
-@nox.session(python="3.10", reuse_venv=True)
+@nox.session(python=["3.7", "3.8", "3.9", "3.10"], reuse_venv=True)
 def test(session):
     session.install("-r", "test-requirements.txt")
     session.run("pytest", *session.posargs)
