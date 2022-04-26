@@ -6,9 +6,7 @@ extra = {}
 if not os.getenv("SKIP_RUST_EXTENSION"):
     from setuptools_rust import Binding, RustExtension
 
-    extra["rust_extensions"] = [
-        RustExtension("ulidr._rust_ulid", binding=Binding.PyO3)
-    ]
+    extra["rust_extensions"] = [RustExtension("ulidr._rust_ulid", binding=Binding.PyO3)]
 
 setup(
     name="ulidr",
